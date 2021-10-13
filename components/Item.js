@@ -1,0 +1,30 @@
+import React from "react";
+import { View, Text , StyleSheet, Button} from "react-native";
+
+export const Item = (props) => {
+    const deleteItem = (id) => {
+        props.delete(id)
+    }
+    return(
+      <View style={styles.container}>
+        <Text style= {styles.text}>{props.text}</Text>
+        <Button title="Delete" onPress={ ()=> props.delete(props.id)}/>
+      </View>
+    )
+  }
+
+  const styles = StyleSheet.create({
+      container: {
+          padding: 10,
+          backgroundColor: 'lightgreen',
+          borderBottomColor: 'black',
+          borderBottomWidth: 1,
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+      },
+      text: {
+        flex: 1
+        
+      },
+  })
