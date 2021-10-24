@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, FlatList, TouchableOpacity, TextInput } from 'r
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import Constants from 'expo-constants'
 import { Item } from './components/Item'
+
 export default function App() {
   const [ data, setData ] = useState([])
   const [ validInput, setValidInput ] = useState(false)
